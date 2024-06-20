@@ -1,30 +1,25 @@
-# React + TypeScript + Vite
+- Application to show posts from dummyapi. You can also like posts.
+- Built with Tanstack query, MUI and React Intersection Observer.
+- Tanstack -> To make it easy to fetch data
+- MUI -> For components and to make it easy to use CSS in JS
+- React Intersection Observer -> To enable endless scrolling
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-------
+In order to run this codebase, please create a .env file with the following variables
+VITE_API_KEY=ENTER_API_KEY_HERE
+VITE_API_URL=https://dummyapi.io/data/v1/post
+VITE_API_LIMIT=50
 
-## Expanding the ESLint configuration
+Run the following commands in the terminal.
+npm ci
+npm run dev
+-------
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Improvements
+- If I had some more time, I'd write some more unit tests, particularly for utility functions such as getNextPageParam() as that is slightly harder to test.
+- Add more functionality such as filter posts by users, date, tags, etc.
